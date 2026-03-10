@@ -1,0 +1,16 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+.env
+
+# Desktop/System
+.DS_Store
+Thumbs.db
+desktop.ini
+*.lnk
+
+# Project specific
+debug_agents.py
+debug_output.txt
+C:/Users/admin/Desktop
