@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Nutritional Analyst</title>
+    <link rel="stylesheet" href="src/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Input Section -->
+        <div class="card full-width">
+            <h1>🍎 Smart Nutritional Analyst</h1>
+            <p style="color: var(--text-dim); margin-bottom: 20px;">Log your food in natural language (e.g., "I had a
+                bowl of muesli and a coffee with oat milk").</p>
+            <div class="input-area">
+                <textarea id="foodInput" placeholder="Describe your meal..."></textarea>
+                <button id="analyzeBtn">Analyze Meal <span id="btnLoader" style="display: none;"
+                        class="loader"></span></button>
+            </div>
+        </div>
+
+        <!-- Parser Output -->
+        <div class="card">
+            <h3>🔍 Agent A: Parser</h3>
+            <div id="parserContent">
+                <p style="color: var(--text-dim);">Structured food items will appear here.</p>
+                <ul id="results"></ul>
+            </div>
+        </div>
+
+        <!-- Calculator Output -->
+        <div class="card">
+            <h3>📊 Agent B: Macros</h3>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-label">Calories</div>
+                    <div id="stat-calories" class="stat-value">0</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-label">Protein</div>
+                    <div id="stat-protein" class="stat-value">0g</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-label">Carbs</div>
+                    <div id="stat-carbs" class="stat-value">0g</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-label">Fat</div>
+                    <div id="stat-fat" class="stat-value">0g</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Coach Output -->
+        <div class="card full-width">
+            <h3>👔 Agent C: Coaching Feedback</h3>
+            <div id="coachFeedback" class="feedback-area">
+                Waiting for analysis...
+            </div>
+        </div>
+    </div>
+    <script type="module" src="src/app.js"></script>
+</body>
+
+</html>
